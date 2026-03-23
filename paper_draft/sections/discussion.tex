@@ -1,0 +1,24 @@
+\section{Discussion}
+\label{sec:discussion}
+
+The results presented in this work demonstrate that black-box lie detectors are primarily {\bf "deception detectors"} rather than {\bf "untruthfulness detectors"}. In other words, they reveal a model's internal awareness that it is providing false information, rather than verifying the factual accuracy of the output itself.
+
+\para{Interpretation of Findings}
+Our results highlight the fundamental difference between epistemic and strategic failures. In strategic deception, the model must maintain two conflicting representations: the internal truth and the deceptive output. This conflict manifests in behavioral inconsistencies, such as a lack of confidence or direct admissions of error when specifically queried. Conversely, in the case of hallucinations, the model's internal representation is already flawed, and the output is consistent with this erroneous belief. As a result, there is no internal conflict for a behavioral detector to exploit.
+
+{\bf Why do these probes work for deception?} We hypothesize that models are trained to be "honest" in their direct responses, but can be steered to be deceptive through specific prompting. However, when the "lie" prompt is followed by neutral elicitation probes like "Are you sure?", the original honesty training re-emerges, leading to a "confession." This suggests that current LLMs are not yet "robustly deceptive"—they cannot maintain a consistent deceptive persona across all follow-up questions.
+
+\para{Limitations}
+While our findings are statistically significant, we acknowledge several limitations in our pilot study. First, we evaluated a single model (\modelname) on a limited number of facts from the \datasetname dataset. The generalizability of these results to larger, more reasoning-capable models (e.g., GPT-4o, Llama-3-70B) remains to be confirmed. Second, we used a subset of black-box elicitation questions. Internal activation-based probes might reveal more subtle differences between hallucinations and deception that behavioral analysis misses. Finally, we only considered "honest" hallucinations—errors where the model truly believes its output. There may be cases where a model "sort of" knows a fact but hallucinates anyway, potentially creating a hybrid state that our current categories do not capture.
+
+\para{Broader Implications for AI Safety}
+{\bf Can we rely on behavioral lie detectors alone?} The primary implication of our research is that behavioral monitoring systems cannot be the sole line of defense against LLM untruthfulness.
+ A system that only detects intentional lies will be blind to hallucinations, which are equally problematic in high-stakes environments. Conversely, a system that only checks for factual truth may fail to identify models that are strategically deceptive, which represents a significant long-term safety risk.
+
+Robust monitoring must therefore decouple these two checks. We propose a multi-layered approach that combines:
+\begin{enumerate}
+    \item {\bf Deception Detection}: Behavioral probes or internal activation monitors to identify strategic misreporting.
+    \item {\bf Epistemic Validation}: External knowledge bases (RAG), confidence calibration, or secondary model verification to identify hallucinations.
+\end{enumerate}
+
+Future research should explore the intersection of these two mechanisms. For instance, can a model be deceptive about its own hallucinations? Investigating how sycophancy (lying to please the user) and other complex deceptive behaviors map onto the hallucination-deception spectrum will be crucial for developing truly reliable AI systems.

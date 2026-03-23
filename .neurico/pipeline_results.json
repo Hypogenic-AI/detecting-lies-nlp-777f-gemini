@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "stages": {
+    "resource_finder": {
+      "success": true,
+      "completion_marker": "/workspaces/detecting-lies-nlp-777f-gemini/.resource_finder_complete",
+      "outputs": {
+        "literature_review": "/workspaces/detecting-lies-nlp-777f-gemini/literature_review.md",
+        "resources_catalog": "/workspaces/detecting-lies-nlp-777f-gemini/resources.md",
+        "papers_dir": "/workspaces/detecting-lies-nlp-777f-gemini/papers",
+        "datasets_dir": "/workspaces/detecting-lies-nlp-777f-gemini/datasets",
+        "code_dir": "/workspaces/detecting-lies-nlp-777f-gemini/code"
+      },
+      "log_file": "/workspaces/detecting-lies-nlp-777f-gemini/logs/resource_finder_gemini.log",
+      "transcript_file": "/workspaces/detecting-lies-nlp-777f-gemini/logs/resource_finder_gemini_transcript.jsonl",
+      "elapsed_time": 1308.5951402187347
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 630.5233709812164,
+      "log_file": "/workspaces/detecting-lies-nlp-777f-gemini/logs/execution_gemini.log",
+      "transcript_file": "/workspaces/detecting-lies-nlp-777f-gemini/logs/execution_gemini_transcript.jsonl"
+    }
+  },
+  "work_dir": "/workspaces/detecting-lies-nlp-777f-gemini"
+}

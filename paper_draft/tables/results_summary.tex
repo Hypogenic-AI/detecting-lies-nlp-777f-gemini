@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering
+\caption{Comparison of mean \liarscore across different scenarios. Standard deviations are provided in parentheses. Results indicate that \deception is highly detectable, while \hallucination is not.}
+\label{tab:main_results}
+\resizebox{0.6\textwidth}{!}{%
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Scenario & Mean \liarscore & Std. Dev. & Count \\ \midrule
+\control (Truthful) & 2.60 & 1.24 & 15 \\
+\deception (Strategic) & \textbf{6.13} & 0.35 & 15 \\
+\hallucination (Epistemic) & 3.20 & 1.64 & 5 \\ \bottomrule
+\end{tabular}%
+}
+\end{table}

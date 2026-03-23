@@ -1,0 +1,37 @@
+PDF: papers/2407.12831_Truth_is_Universal.pdf
+Total pages: 32
+Pages per chunk: 1
+
+Chunks:
+  2407.12831_Truth_is_Universal_chunk_001.pdf: page 1
+  2407.12831_Truth_is_Universal_chunk_002.pdf: page 2
+  2407.12831_Truth_is_Universal_chunk_003.pdf: page 3
+  2407.12831_Truth_is_Universal_chunk_004.pdf: page 4
+  2407.12831_Truth_is_Universal_chunk_005.pdf: page 5
+  2407.12831_Truth_is_Universal_chunk_006.pdf: page 6
+  2407.12831_Truth_is_Universal_chunk_007.pdf: page 7
+  2407.12831_Truth_is_Universal_chunk_008.pdf: page 8
+  2407.12831_Truth_is_Universal_chunk_009.pdf: page 9
+  2407.12831_Truth_is_Universal_chunk_010.pdf: page 10
+  2407.12831_Truth_is_Universal_chunk_011.pdf: page 11
+  2407.12831_Truth_is_Universal_chunk_012.pdf: page 12
+  2407.12831_Truth_is_Universal_chunk_013.pdf: page 13
+  2407.12831_Truth_is_Universal_chunk_014.pdf: page 14
+  2407.12831_Truth_is_Universal_chunk_015.pdf: page 15
+  2407.12831_Truth_is_Universal_chunk_016.pdf: page 16
+  2407.12831_Truth_is_Universal_chunk_017.pdf: page 17
+  2407.12831_Truth_is_Universal_chunk_018.pdf: page 18
+  2407.12831_Truth_is_Universal_chunk_019.pdf: page 19
+  2407.12831_Truth_is_Universal_chunk_020.pdf: page 20
+  2407.12831_Truth_is_Universal_chunk_021.pdf: page 21
+  2407.12831_Truth_is_Universal_chunk_022.pdf: page 22
+  2407.12831_Truth_is_Universal_chunk_023.pdf: page 23
+  2407.12831_Truth_is_Universal_chunk_024.pdf: page 24
+  2407.12831_Truth_is_Universal_chunk_025.pdf: page 25
+  2407.12831_Truth_is_Universal_chunk_026.pdf: page 26
+  2407.12831_Truth_is_Universal_chunk_027.pdf: page 27
+  2407.12831_Truth_is_Universal_chunk_028.pdf: page 28
+  2407.12831_Truth_is_Universal_chunk_029.pdf: page 29
+  2407.12831_Truth_is_Universal_chunk_030.pdf: page 30
+  2407.12831_Truth_is_Universal_chunk_031.pdf: page 31
+  2407.12831_Truth_is_Universal_chunk_032.pdf: page 32

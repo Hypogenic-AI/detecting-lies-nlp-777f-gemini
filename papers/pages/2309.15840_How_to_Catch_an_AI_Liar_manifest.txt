@@ -1,0 +1,41 @@
+PDF: papers/2309.15840_How_to_Catch_an_AI_Liar.pdf
+Total pages: 36
+Pages per chunk: 1
+
+Chunks:
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_001.pdf: page 1
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_002.pdf: page 2
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_003.pdf: page 3
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_004.pdf: page 4
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_005.pdf: page 5
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_006.pdf: page 6
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_007.pdf: page 7
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_008.pdf: page 8
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_009.pdf: page 9
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_010.pdf: page 10
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_011.pdf: page 11
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_012.pdf: page 12
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_013.pdf: page 13
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_014.pdf: page 14
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_015.pdf: page 15
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_016.pdf: page 16
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_017.pdf: page 17
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_018.pdf: page 18
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_019.pdf: page 19
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_020.pdf: page 20
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_021.pdf: page 21
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_022.pdf: page 22
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_023.pdf: page 23
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_024.pdf: page 24
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_025.pdf: page 25
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_026.pdf: page 26
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_027.pdf: page 27
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_028.pdf: page 28
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_029.pdf: page 29
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_030.pdf: page 30
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_031.pdf: page 31
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_032.pdf: page 32
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_033.pdf: page 33
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_034.pdf: page 34
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_035.pdf: page 35
+  2309.15840_How_to_Catch_an_AI_Liar_chunk_036.pdf: page 36

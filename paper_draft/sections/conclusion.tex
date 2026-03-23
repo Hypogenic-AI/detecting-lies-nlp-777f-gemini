@@ -1,0 +1,8 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+In this study, we investigated the distinction between epistemic failure (hallucination) and strategic deception (intentional misreporting) in Large Language Models. By systematically controlling the knowledge state and intent of \modelname on the \datasetname dataset, we demonstrated that black-box lie detectors are primarily effective at identifying deception. Our results show a stark contrast: while intentional lies are highly detectable ($p < 0.0001$), hallucinations remain statistically indistinguishable from truthful control statements.
+
+These findings suggest that behavioral lie detectors primarily measure the consistency of a model's output with its internal beliefs rather than the objective truth. Consequently, we argue that the development of reliable AI monitoring systems must involve decoupling deception detection from factual verification. Simply detecting whether a model "knows" it is lying is insufficient for addressing the broad spectrum of untruthful behavior.
+
+Future work should extend this analysis to mechanistic internal probing and larger, more complex models. Investigating whether activation-based detectors exhibit similar sensitivity to the intentionality of falsehoods will provide deeper insights into the internal representations of truth and deception in LLMs. Ultimately, achieving robust AI alignment will require multi-layered approaches that address both the intent and the correctness of model-generated information.

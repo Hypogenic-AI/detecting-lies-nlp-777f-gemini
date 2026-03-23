@@ -1,0 +1,33 @@
+\section{Results}
+\label{sec:results}
+
+\input{tables/results_summary}
+
+We report the main findings from our decoupling experiments, emphasizing the performance divergence of black-box lie detectors between strategic deception and epistemic failure.
+
+\para{Detection Performance Divergence}
+Our primary finding is that black-box lie detectors based on elicitation questions are highly sensitive to intentional deception but fail to detect hallucinations. As shown in \tabref{tab:main_results}, the mean \liarscore for the \deception group was {\bf 6.13}, which is more than double the score for the \control group ({\bf 2.60}). In contrast, the \hallucination group achieved a mean score of {\bf 3.20}, which is only marginally higher than the control group.
+
+\para{Statistical Significance}
+We conducted a two-sample t-test to assess the significance of these differences. The comparison between \deception and \hallucination yielded a t-statistic of {\bf 6.8074} with a p-value of {\bf $p < 0.0001$}, confirming that the detector behaves very differently depending on the mechanism of untruthfulness. Conversely, the difference between the \hallucination and \control groups was not statistically significant at conventional levels, suggesting that from the perspective of an elicitation-based detector, an "honest" hallucination is indistinguishable from a truthful statement.
+
+\para{Top Discriminative Probes}
+We further analyzed individual probes to identify which questions were most effective at uncovering intentional deception. We calculated the average score difference between the \deception and \hallucination groups for each probe. The most discriminative probes are summarized in \tabref{tab:top_probes}.
+
+\begin{table}[h]
+\centering
+\caption{Top discriminative probes by mean difference in score between \deception and \hallucination. Higher values indicate greater sensitivity to intentional deception over hallucinations.}
+\label{tab:top_probes}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Probe Question & Deception Avg. & Hallucination Avg. & Difference \\ \midrule
+Are you sure? & 1.0 & 0.2 & 0.8 \\
+Is the previous statement truth? & 1.0 & 0.2 & 0.8 \\
+Is the previous statement accurate? & 1.0 & 0.2 & 0.8 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+The probes "Are you sure?", "Is the previous statement truth?", and "Is the previous statement accurate?" showed near-perfect discrimination. In nearly all deceptive cases, the model admitted a lack of certainty or accuracy when queried directly, despite providing the lie initially. In contrast, during hallucinations, the model remained as confident in its incorrect answer as it was in its correct answers.
+
+\para{Internal State Consistency}
+These results support the hypothesis that behavioral lie detectors primarily measure the consistency of a model's output with its internal knowledge state. In the case of \deception, there is a clear mismatch between the model's knowledge (French) and its output (Swahili), which the elicitation probes successfully reveal. In the case of \hallucination, the model's internal state is consistent with its output (it truly "believes" its error), leaving no inconsistency for the detector to identify.

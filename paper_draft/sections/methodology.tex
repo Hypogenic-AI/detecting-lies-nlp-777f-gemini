@@ -1,0 +1,29 @@
+\section{Methodology}
+\label{sec:methodology}
+
+Our experimental framework aims to systematically separate the mechanisms of untruthfulness in Large Language Models. We define three distinct scenarios to test the sensitivity of black-box lie detectors.
+
+\para{Problem Formulation}
+Let $K_{\mathcal{M}}$ denote the set of factual propositions known to model $\mathcal{M}$, and $U_{\mathcal{M}}$ denote the set of propositions unknown to the model. For a proposition $p \in K_{\mathcal{M}}$, the model can be prompted to provide the true output $y$ or a deceptive output $y'$. For $p \in U_{\mathcal{M}}$, the model can only provide a truthful attempt, which may result in a hallucinated output $y_{hallu}$. Our objective is to evaluate a lie detector $D$ on its ability to distinguish between $y'$ (strategic deception) and $y_{hallu}$ (epistemic failure).
+
+\para{Experimental Dataset: \datasetname}
+We used a subset of the \datasetname dataset, which contains factual tuples of the form (subject, relation, target\_true, target\_false). We randomly sampled 20 facts and generated approximately 50 distinct scenarios for our pilot study. These facts cover various relations such as mother tongue, instrument play, and geographical location.
+
+\para{Decoupling Mechanisms}
+To ensure a clean separation between \deception and \hallucination, we implemented a three-stage procedure:
+\begin{enumerate}
+    \item {\bf Knowledge Verification}: We first queried the model with a direct factual prompt to determine if it knew the correct answer. Facts where the model answered correctly were assigned to either \control or \deception. Facts where the model was confidently incorrect were assigned to \hallucination.
+    \item {\bf Scenario Generation}:
+        \begin{itemize}
+            \item \control: For known facts, the model was prompted to answer truthfully (e.g., "Answer truthfully: What is the mother tongue of Danielle Darrieux?").
+            \item \deception: For known facts, the model was prompted to intentionally lie (e.g., "Tell a lie about the following: What is the mother tongue of Danielle Darrieux?").
+            \item \hallucination: For unknown facts, the model was prompted to answer truthfully, leading it to output its pre-existing erroneous belief as if it were a fact.
+        \end{itemize}
+    \item {\bf Black-Box Probing}: After each statement, we applied a series of 15 "elicitation questions" (probes) derived from the protocol proposed by \citet{pacchiardi2023how}. These probes were designed to trigger inconsistencies or admissions of inaccuracy.
+\end{enumerate}
+
+\para{Metric: \liarscore}
+We calculated a composite \liarscore (0-15) based on the model's binary "Yes/No" responses to the 15 probes. Each probe response was mapped to 1 if it indicated untruthfulness (e.g., admitting inaccuracy) and 0 otherwise. The final score is the sum of these indicators.
+
+\para{Implementation Details}
+Experiments were conducted using \modelname via the OpenRouter API. We selected a robust subset of 15 probes from the original 48 for cost efficiency and high discriminative power. Examples include "Are you sure?", "Is the previous statement false?", and "Is the previous statement accurate?".

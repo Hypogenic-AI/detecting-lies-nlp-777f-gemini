@@ -1,0 +1,16 @@
+\section{Related Work}
+\label{sec:related_work}
+
+The field of detecting untruthfulness in Large Language Models (LLMs) has developed along two primary axes: mechanistic probing of internal activations and behavioral analysis of model outputs.
+
+\para{Mechanistic Lie Detection}
+Recent work has explored whether the internal states of LLMs contain representations of "truth." \citet{burns2022discovering} and \citet{azaria2023the} demonstrated that linear probes trained on hidden activations can identify when a model is lying. More recently, \citet{burger2024truth} identified a robust "truth subspace" that generalizes across different models and tasks. These findings suggest that models maintain an internal knowledge state that can be decoupled from their outputs. Building on this, \citet{zou2023representation} introduced Representation Engineering (\textsc{RepE}) as a framework for monitoring high-level concepts like honesty. However, these methods often focus on identifying "knowledge" rather than "intent," potentially conflating unintentional errors with strategic deception.
+
+\para{Strategic Deception and Hallucination}
+The distinction between intentional lies and honest mistakes has gained increasing attention. \citet{wang2025when} specifically examined "strategic deception," where reasoning-capable models provide false outputs despite internal evidence to the contrary. They used Linear Artificial Tomography (\textsc{LAT}) to extract deception vectors, showing that strategic lies have a distinct activation signature. Conversely, the literature on hallucinations \cite{lin2021truthfulqa} characterizes untruthfulness as an epistemic failure, often due to training data bias or model-internal limitations. Our work focuses on the behavioral overlap between these two failure modes, examining if a single detector can handle both mechanisms.
+
+\para{Black-Box Lie Detection}
+For models without accessible activations, black-box methods provide an alternative. \citet{pacchiardi2023how} proposed a protocol based on "elicitation questions"—unrelated queries that trigger psychological or logical inconsistencies in deceptive models. This approach has proven effective at detecting sycophantic lies and fine-tuned deception. Unlike previous work that evaluates these detectors on mixed datasets, our study explicitly controls for the model's internal knowledge state, allowing us to test if these black-box signals are triggered by the act of lying or the falsity of the resulting statement.
+
+\para{Gap in Existing Literature}
+While existing research has developed sophisticated detectors, there is a lack of systematic evaluation on whether these detectors generalize across the hallucination-deception divide. If a detector is trained primarily on intentional lies, it may provide a false sense of security by failing to flag hallucinations, which are equally detrimental in many applications. Our research addresses this gap by directly comparing detector performance across well-defined categories of untruthfulness.

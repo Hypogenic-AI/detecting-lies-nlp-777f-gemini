@@ -1,0 +1,20 @@
+\section{Introduction}
+\label{sec:intro}
+
+The ability of Large Language Models (LLMs) to generate coherent, human-like text has led to their rapid adoption in domains ranging from medical diagnosis to legal analysis. However, as these models are tasked with higher-stakes responsibilities, their tendency to produce false information remains a critical bottleneck. While much research has focused on the broad category of "untruthfulness," there is a fundamental distinction between an LLM making an honest mistake due to a lack of knowledge—commonly referred to as a {\bf hallucination}—and the model intentionally providing false information despite knowing the truth, which we define as {\bf strategic deception}.
+
+Given the growing interest in deploying LLMs as autonomous agents, understanding the mechanism behind their falsehoods is essential for building robust monitoring systems. A model that hallucinates is experiencing an epistemic failure, whereas a model that strategically deceives is exhibiting an alignment failure. These two modes of failure require vastly different mitigation strategies: hallucinations may be addressed through better data or retrieval-augmented generation (RAG), while strategic deception requires deeper research into AI safety and deceptive alignment.
+
+However, existing lie-detection methods, both mechanistic and behavioral, often evaluate performance on datasets that do not cleanly separate these two mechanisms. This lack of clear distinction makes it difficult to determine whether current "lie detectors" are identifying the act of lying (the intent) or the falsity of the statement (the outcome). If a detector only works when the model "knows" it is lying, it may fail to alert users to equally dangerous hallucinations where the model remains confidently incorrect.
+
+We propose a systematic investigation to decouple these mechanisms. Using the \datasetname dataset, we categorize factual questions into known and unknown sets for a target model (\modelname). We then create three distinct scenarios: (1) \control: truthful answers to known facts; (2) \deception: intentional lies about known facts; and (3) \hallucination: truthful attempts at unknown facts that result in falsehoods. By applying the "Elicitation Questions" protocol proposed by \citet{pacchiardi2023how}, we measure the response of a black-box lie detector across these scenarios.
+
+Our results demonstrate a significant performance gap. While intentional \deception is highly detectable with a mean \liarscore of {\bf 6.13}, \hallucination yields a score of only {\bf 3.20}, which is much closer to the \control group mean of {\bf 2.60} than to the deception group. Statistical analysis confirms that the difference between \deception and \hallucination is extremely significant ($p < 0.0001$), while the difference between \hallucination and \control is not. This preview of our results indicates that behavioral lie detectors are more accurately described as "deception detectors" that rely on the model's internal awareness of its own untruthfulness.
+
+Our main contributions are summarized as follows:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item We propose a novel experimental framework to systematically decouple epistemic failure (hallucination) from strategic deception (intentional lies) in LLMs.
+    \item We conduct a comparative analysis of black-box lie detectors, demonstrating that they are significantly more effective at detecting intentional deception than hallucinations.
+    \item We identify specific "confession" probes, such as "Are you sure?" and "Is the previous statement accurate?", which reveal the model's internal awareness in deceptive cases but remain unchanged during hallucinations.
+    \item We provide evidence that behavioral monitoring systems must be complemented with separate epistemic validation methods to handle both strategic and honest failures.
+\end{itemize}
